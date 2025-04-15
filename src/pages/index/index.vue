@@ -2,10 +2,9 @@
   <view>
     页面a
     <!-- 引起bug的代码，以下条件缺一不可
-     1：页面a有swiper组件
-     2：swiper组件有for循环遍历的swiper-item子组件
-     3：swiper-item本身或者子组件有ref属性并在setup中已定义
-     4：两个页面通过uni.redirectTo互相跳转
+     1：页面有for循环遍历的swiper-item子组件，有没有swiper父组件都无所谓
+     2：swiper-item本身或者子组件有ref属性并在setup中已定义
+     3：两个页面通过uni.redirectTo互相跳转
       -->
     <swiper v-if="isShowSwiper">
       <!-- <swiper-item v-for="item in 2" :key="item" ref="itemRef">
